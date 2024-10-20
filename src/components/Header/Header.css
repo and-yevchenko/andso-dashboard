@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-section {
+    display: flex;
+    gap: 1rem;
+}
+
+.notifications {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > * {
+        font-size: 1.5rem;
+        color: var(--color-text-extra);
+    }
+}
+
+.user {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    img {
+        width: 100%;
+        border-radius: 50%;
+    }
+}
