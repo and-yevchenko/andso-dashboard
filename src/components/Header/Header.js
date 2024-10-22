@@ -3,7 +3,7 @@ import logoIcon from '../../assets/logo.svg';
 
 export function Header() {
     const header = document.createElement('header');
-    header.classList.add('header');
+    header.className = 'header';
 
     header.innerHTML = `
         <div class="logo-section">

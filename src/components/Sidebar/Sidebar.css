@@ -38,37 +38,6 @@
     border-radius: 50%;
 }
 
-.nav {
-    padding: 2rem 0;
-    flex: 1 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.nav-item {
-    color: var(--color-text-extra);
-    background-color: transparent;
-    font-size: var(--text-size-default);
-    letter-spacing: 0.025rem;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    padding: 1rem 2rem;
-    border-radius: 3rem;
-    transition: all 0.5s ease;
-    &:hover {
-        color: var(--color-accent);
-        background-color: var(--color-hover-btn);
-        transition: all 0.5s ease;
-    }
-    i {
-        width: 24px;
-        text-align: center;
-    }
-}
-
 .settings {
     background-color: transparent;
     font-size: var(--text-size-default);
