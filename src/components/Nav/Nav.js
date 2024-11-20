@@ -1,28 +1,9 @@
 import { createState } from '../../utils/createState';
 import './Nav.css';
 
-const navMenu = [
-    {
-        name: 'Home',
-        icon: `<i class="fa-solid fa-house"></i>`,
-    },
-    {
-        name: 'Tasks',
-        icon: `<i class="fa-solid fa-list-check"></i>`,
-    },
-    {
-        name: 'Messages',
-        icon: `<i class="fa-solid fa-message"></i>`,
-    },
-    {
-        name: 'Team',
-        icon: `<i class="fa-solid fa-user-group"></i>`,
-    },
-];
-
 export const stateNav = createState(0);
 
-export function Nav() {
+export function Nav(navMenu) {
     const nav = document.createElement('nav');
     nav.className = 'nav';
     nav.innerHTML = `
@@ -46,7 +27,7 @@ export function Nav() {
         });
     }
 
-    const updateActiveClass = (items, activeIndex) => {
+    function updateActiveClass(items, activeIndex) {
         items.forEach((item, index) => {
             if (index === activeIndex) {
                 item.classList.add('_active');
