@@ -1,5 +1,5 @@
 import { ButtonWithIcon } from '../Buttons/ButtonWithIcon';
-import { Nav } from '../Nav/Nav';
+import { Navigation } from '../Nav/Nav';
 import { Profile } from '../Profile/Profile';
 import './Sidebar.css';
 
@@ -33,7 +33,7 @@ export function Sidebar() {
             position: 'Sales manager',
         }),
     );
-    sidebar.append(new Nav(navMenu));
+    sidebar.append(new Navigation(navMenu).getElement());
     sidebar.append(
         ButtonWithIcon.create({
             className: 'settings',
