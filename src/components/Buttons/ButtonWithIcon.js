@@ -1,12 +1,12 @@
+export const ButtonWithIcon = {
+    create({ className, text, icon, onClick }) {
+        const button = document.createElement('button');
 
-export function ButtonWithIcon({ className, text, icon, onClick, id }) {
-    const button = document.createElement('button');
+        button.type = 'button';
+        button.className = className;
+        button.innerHTML = `${icon}<span>${text}</span>`;
+        if (onClick) button.onclick = onClick;
 
-    button.className = className;
-    button.innerHTML = `${icon}<span>${text}</span>`
-    button.type = "button"
-    button.onclick = onClick
-    button.dataset.id = id
-
-    return button
-}
+        return button;
+    },
+};

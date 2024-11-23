@@ -1,3 +1,4 @@
+import { ButtonWithIcon } from '../Buttons/ButtonWithIcon';
 import { Nav } from '../Nav/Nav';
 import { Profile } from '../Profile/Profile';
 import './Sidebar.css';
@@ -25,12 +26,21 @@ export function Sidebar() {
     const sidebar = document.createElement('aside');
     sidebar.className = 'sidebar';
 
-    sidebar.innerHTML = `
-        <button type="button" class="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
-    `;
-
-    sidebar.prepend(new Nav(navMenu));
-    sidebar.prepend(new Profile());
+    sidebar.append(
+        Profile.create({
+            src: '/src/assets/user/emma-roberts.jpg',
+            name: 'Emma Roberts',
+            position: 'Sales manager',
+        }),
+    );
+    sidebar.append(new Nav(navMenu));
+    sidebar.append(
+        ButtonWithIcon.create({
+            className: 'settings',
+            text: 'Settings',
+            icon: `<i class="fa-solid fa-gear"></i>`,
+        }),
+    );
 
     return sidebar;
 }
