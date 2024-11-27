@@ -1,8 +1,9 @@
 import { createState } from '../../utils/createState';
 import { ButtonWithIcon } from '../Buttons/ButtonWithIcon';
+import { Main } from '../Main/Main';
 import './Nav.css';
 
-const stateNav = createState(1)
+export const stateNav = createState(1)
 
 export class Navigation {
     constructor (navMenu) {
@@ -37,6 +38,7 @@ export class Navigation {
     handleClick(activeIndex) {
         this.state.setState(activeIndex);
         this.updateActiveClass(activeIndex);
+        Main.renderPage(activeIndex);
     }
 
     updateActiveClass(activeIndex) {
