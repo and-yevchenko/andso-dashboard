@@ -1,0 +1,11 @@
+.block {
+    background-color: var(--color-block);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: auto;
+    h4 {
+        text-align: start;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+    }
+}
