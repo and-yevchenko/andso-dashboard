@@ -12,13 +12,12 @@ export function LineChart() {
                 {
                     label: 'Growth',
                     data: [12, 19, 3, 5, 2, 3],
-                    // borderWidth: 1,
                     borderColor: '#9f4636bb',
-                    // backgroundColor: '#9f4636bb',
+                    tension: 0.5
                 },
             ],
         },
-        options: {
+        options: { //TODO
             scales: {
                 y: {
                     beginAtZero: true,
@@ -26,7 +25,6 @@ export function LineChart() {
             },
         },
     });
-    console.log(chart.data);
 
     const lineChart = Box.create({ title: 'Sales', content: canvas });
     return lineChart;

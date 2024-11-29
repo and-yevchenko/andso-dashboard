@@ -2,13 +2,13 @@ import './Box.css';
 
 export const Box = {
     create({ title, content, className }) {
-        const block = document.createElement('article');
+        const box = document.createElement('article');
 
-        block.className = 'box';
-        if (className) block.classList.add(className)
-        if (title) block.innerHTML = `<h4>${title}</h4>`;
-        block.append(content)
+        box.className = 'box';
+        if (className) box.classList.add(className)
+        if (title) box.innerHTML = `<h4>${title}</h4>`;
+        box.append(content)
 
-        return block;
+        return box;
     },
 };

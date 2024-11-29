@@ -13,13 +13,16 @@ export function BarChart() {
                     label: '2024',
                     data: [12, 19, 3, 5, 2, 3],
                     borderWidth: 1,
-                    backgroundColor: '#9f4636bb',
                 },
                 {
                     label: '2023',
                     data: [16, 10, 2, 1, 7, 9],
                     borderWidth: 1,
-                    // backgroundColor: '#c5c5c5',
+                },
+                {
+                    label: '2022',
+                    data: [16, 10, 2, 1, 7, 9],
+                    borderWidth: 1,
                 },
             ],
         },
