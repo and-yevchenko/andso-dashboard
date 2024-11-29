@@ -1,28 +1,24 @@
 import { Chart } from "chart.js";
 import { Block } from "../Block/Block";
 
-export function ChartSalesCategory() {
-    const chartSalesCategory = Block.create({title: "Sales by category"});
+
+export function ChartSales() {
+    const chartSales = Block.create({title: "Sales"});
     const canvas = document.createElement('canvas');
-    chartSalesCategory.append(canvas);
+    chartSales.append(canvas);
 
     const chart = new Chart(canvas, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
           datasets: [
             {
-                label: '2024',
+                label: 'Growth',
                 data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 1,
-                backgroundColor: '#9f4636bb',
+                // borderWidth: 1,
+                borderColor: '#9f4636bb',
+                // backgroundColor: '#9f4636bb',
             },
-            {
-                label: '2023',
-                data: [16, 10, 2, 1, 7, 9],
-                borderWidth: 1,
-                // backgroundColor: '#c5c5c5',
-            }
         ]
         },
         options: {
@@ -33,6 +29,7 @@ export function ChartSalesCategory() {
           }
         }
     });
+    console.log(chart.data)
 
-    return chartSalesCategory
+    return chartSales
 }
