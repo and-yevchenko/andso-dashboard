@@ -1,5 +1,5 @@
 import { Chart } from 'chart.js';
-import { Box } from '../Block/Box';
+import { Box } from '../Box/Box';
 
 export function LineChart() {
     const canvas = document.createElement('canvas');
@@ -13,11 +13,11 @@ export function LineChart() {
                     label: 'Growth',
                     data: [12, 19, 3, 5, 2, 3],
                     borderColor: '#9f4636bb',
-                    tension: 0.5
+                    tension: 0.5,
                 },
             ],
         },
-        options: { //TODO
+        options: {
             scales: {
                 y: {
                     beginAtZero: true,

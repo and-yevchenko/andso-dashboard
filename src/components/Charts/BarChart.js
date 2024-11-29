@@ -1,5 +1,5 @@
 import { Chart } from 'chart.js';
-import { Box } from '../Block/Box';
+import { Box } from '../Box/Box';
 
 export function BarChart() {
     const canvas = document.createElement('canvas');
@@ -35,6 +35,9 @@ export function BarChart() {
         },
     });
 
-    const barChart = Box.create({ title: 'Sales by category', content: canvas });
+    const barChart = Box.create({
+        title: 'Sales by category',
+        content: canvas,
+    });
     return barChart;
 }
