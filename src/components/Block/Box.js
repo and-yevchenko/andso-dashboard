@@ -1,12 +1,13 @@
-import './Block.css';
+import './Box.css';
 
-export const Block = {
-    create({ title, className }) {
+export const Box = {
+    create({ title, content, className }) {
         const block = document.createElement('article');
 
-        block.className = 'block';
+        block.className = 'box';
         if (className) block.classList.add(className)
         if (title) block.innerHTML = `<h4>${title}</h4>`;
+        block.append(content)
 
         return block;
     },

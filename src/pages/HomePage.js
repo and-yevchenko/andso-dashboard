@@ -1,7 +1,7 @@
 import { Chart, registerables } from 'chart.js';
-import { ChartSalesCategory } from '../components/Charts/ChartSalesCategory';
+import { ChartSalesCategory } from '../components/Charts/BarChart';
 import './HomePage.css';
-import { ChartSales } from '../components/Charts/Sales';
+import { ChartSales } from '../components/Charts/LineChart';
 
 export function HomePage() {
     const page = document.createElement('section')
