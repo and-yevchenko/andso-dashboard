@@ -1,29 +1,23 @@
 import { Chart } from 'chart.js';
 import { Box } from '../Box/Box';
 
-export function PolarAreaChart() {
+export function PolarAreaChart(data) {
     const canvas = document.createElement('canvas');
 
     const chart = new Chart(canvas, {
         type: 'polarArea',
         data: {
-            labels: [
-                'Europe',
-                'Asia',
-                'Africa',
-                'North America',
-                'South America',
-            ],
+            labels: Object.keys(data.values),
             datasets: [
                 {
-                    label: 'Growth',
-                    data: [12, 19, 3, 5, 6],
+                    label: data.label,
+                    data: Object.values(data.values),
                     hoverOffset: 5,
                 },
             ],
         },
     });
 
-    const polarAreaChart = Box.create({ title: 'Sales', content: canvas });
+    const polarAreaChart = Box.create({ title: data.title, content: canvas });
     return polarAreaChart;
 }
