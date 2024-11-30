@@ -7,4 +7,4 @@ const app = document.querySelector('#app');
 
 app.append(Header());
 app.append(Sidebar());
-Main.init()
+Main.init();

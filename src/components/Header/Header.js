@@ -8,17 +8,27 @@ export function Header() {
     header.className = 'header';
 
     const logoSection = document.createElement('div');
-    logoSection.className ='logo-section'
+    logoSection.className = 'logo-section';
     logoSection.innerHTML = `
         <a href="/" class="logo-link">
             <img src=${logoIcon} class="logo-img" alt="Logo" width="100px"/>
         </a>
-    `
+    `;
 
     const userSection = document.createElement('div');
-    userSection.className ='user-section'
-    userSection.append(ButtonWithIcon.create({className: "notifications", icon: `<i class="fa-regular fa-bell">`}))
-    userSection.append(Profile.create({src: '/src/assets/user/emma-roberts.jpg', alt: 'Emma Roberts'}));
+    userSection.className = 'user-section';
+    userSection.append(
+        ButtonWithIcon.create({
+            className: 'notifications',
+            icon: `<i class="fa-regular fa-bell">`,
+        }),
+    );
+    userSection.append(
+        Profile.create({
+            src: '/src/assets/user/emma-roberts.jpg',
+            alt: 'Emma Roberts',
+        }),
+    );
 
     header.append(logoSection);
     header.append(userSection);

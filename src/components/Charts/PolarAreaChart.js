@@ -7,7 +7,13 @@ export function PolarAreaChart() {
     const chart = new Chart(canvas, {
         type: 'polarArea',
         data: {
-            labels: ['Europe', 'Asia', 'Africa', 'North America', 'South America'],
+            labels: [
+                'Europe',
+                'Asia',
+                'Africa',
+                'North America',
+                'South America',
+            ],
             datasets: [
                 {
                     label: 'Growth',

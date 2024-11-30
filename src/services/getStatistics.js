@@ -1,4 +1,3 @@
-
 export async function getStatistics() {
     try {
         const response = await fetch('./src/data/data.json');
@@ -7,7 +6,7 @@ export async function getStatistics() {
         }
         const data = await response.json();
         return { data, error: null };
-    } catch(error) {
+    } catch (error) {
         return { data: null, error: error.message };
     }
 }

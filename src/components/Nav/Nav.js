@@ -3,21 +3,21 @@ import { ButtonWithIcon } from '../Buttons/ButtonWithIcon';
 import { Main } from '../Main/Main';
 import './Nav.css';
 
-export const stateNav = createState(1)
+export const stateNav = createState(1);
 
 export class Navigation {
-    constructor (navMenu) {
-        this.navMenu = navMenu
-        this.state = stateNav
-        this.navItems = []
-        this.nav = this.createNav()
-        this.init()
+    constructor(navMenu) {
+        this.navMenu = navMenu;
+        this.state = stateNav;
+        this.navItems = [];
+        this.nav = this.createNav();
+        this.init();
     }
 
     createNav() {
         const nav = document.createElement('nav');
         nav.className = 'nav';
-        return nav
+        return nav;
     }
 
     init() {
@@ -29,12 +29,12 @@ export class Navigation {
                 onClick: () => this.handleClick(index + 1),
             });
         });
-    
+
         this.nav.append(...this.navItems);
-    
+
         this.navItems[0].classList.add('_active');
     }
-    
+
     handleClick(activeIndex) {
         this.state.setState(activeIndex);
         this.updateActiveClass(activeIndex);
@@ -48,6 +48,6 @@ export class Navigation {
     }
 
     getElement() {
-        return this.nav
+        return this.nav;
     }
 }

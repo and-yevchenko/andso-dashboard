@@ -30,7 +30,7 @@ export function Sidebar() {
         Profile.create({
             src: '/src/assets/user/emma-roberts.jpg',
             alt: 'Emma Roberts',
-            name: 'Emma Roberts', 
+            name: 'Emma Roberts',
             position: 'Sales manager',
         }),
     );

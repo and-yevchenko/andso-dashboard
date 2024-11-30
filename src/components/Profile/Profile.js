@@ -18,7 +18,7 @@ export const Profile = {
             ${position ? `<span class="profile-position">${position}</span>` : ''}
             `;
 
-            profile.append(profileInfo)
+            profile.append(profileInfo);
         }
 
         return profile;
