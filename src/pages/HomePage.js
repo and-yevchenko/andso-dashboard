@@ -21,10 +21,18 @@ export async function HomePage() {
         page.firstChild.innerHTML = ``;
 
         Chart.register(...registerables);
-        page.firstChild.append(LineChart(data.find((el) => el.title === 'Sales')));
-        page.firstChild.append(LineChart(data.find((el) => el.title === 'Offer')));
-        page.firstChild.append(LineChart(data.find((el) => el.title === 'Demand')));
-        page.firstChild.append(BarChart());
+        page.firstChild.append(
+            LineChart(data.find((el) => el.title === 'Sales')),
+        );
+        page.firstChild.append(
+            LineChart(data.find((el) => el.title === 'Offer')),
+        );
+        page.firstChild.append(
+            LineChart(data.find((el) => el.title === 'Demand')),
+        );
+        page.firstChild.append(
+            BarChart(data.find((el) => el.title === 'Sales by category')),
+        );
         page.firstChild.append(CircleChart());
         page.firstChild.append(PolarAreaChart());
         page.firstChild.append(CircleChart());

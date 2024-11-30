@@ -3,8 +3,7 @@ import { Box } from '../Box/Box';
 
 export function LineChart(data) {
     const canvas = document.createElement('canvas');
-    const value = Object.values(data.values)
-    console.log(value[0] < value[value.length - 1] ? '#00d800' : '#ff2020')
+    const value = Object.values(data.values);
 
     const chart = new Chart(canvas, {
         type: 'line',
@@ -14,7 +13,10 @@ export function LineChart(data) {
                 {
                     label: data.label,
                     data: Object.values(data.values).slice(-6),
-                    borderColor: value[0] < value[value.length - 1] ? '#008f00be' : '#c20a0acc',
+                    borderColor:
+                        value[0] < value[value.length - 1]
+                            ? '#008f00be'
+                            : '#c20a0acc',
                     tension: 0.2,
                 },
             ],

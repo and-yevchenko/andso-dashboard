@@ -45,7 +45,7 @@
         "id": 4,
         "years": [
             {
-                "year": 2024,
+                "label": 2024,
                 "values": {
                     "Phones": 40000,
                     "Chairs": 15000,
@@ -55,7 +55,7 @@
                 }
             },
             {
-                "year": 2023,
+                "label": 2023,
                 "values": {
                     "Phones": 35000,
                     "Chairs": 20000,
@@ -65,7 +65,7 @@
                 }
             },
             {
-                "year": 2022,
+                "label": 2022,
                 "values": {
                     "Phones": 20000,
                     "Chairs": 10000,

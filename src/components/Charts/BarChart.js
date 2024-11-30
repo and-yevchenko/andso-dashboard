@@ -1,30 +1,22 @@
 import { Chart } from 'chart.js';
 import { Box } from '../Box/Box';
 
-export function BarChart() {
+export function BarChart(data) {
     const canvas = document.createElement('canvas');
 
     const chart = new Chart(canvas, {
         type: 'bar',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [
-                {
-                    label: '2024',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1,
-                },
-                {
-                    label: '2023',
-                    data: [16, 10, 2, 1, 7, 9],
-                    borderWidth: 1,
-                },
-                {
-                    label: '2022',
-                    data: [16, 10, 2, 1, 7, 9],
-                    borderWidth: 1,
-                },
+            labels: [
+                ...new Set(
+                    data.years.map((year) => Object.keys(year.values)).flat(),
+                ),
             ],
+            datasets: data.years.map((year) => ({
+                label: year.label,
+                data: Object.values(year.values),
+                borderWidth: 1,
+            })),
         },
         options: {
             scales: {
@@ -36,7 +28,7 @@ export function BarChart() {
     });
 
     const barChart = Box.create({
-        title: 'Sales by category',
+        title: data.title,
         content: canvas,
     });
     return barChart;
