@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600;700&display=swap');
 
 :root {
-    --color-background: #f1dcd9;
-    --color-accent: #9f4636;
+    --color-background: #d8d5d4;
+    --color-accent: #ff9100;
+    /* --color-accent: #9f4636; */
     --color-block: #ffffff;
-    --color-hover-btn: #9f463636;
+    --color-hover-btn: #ff910052;
     --color-text-default: #000000;
     --color-text-extra: #707070;
     --text-size-default: 1rem;

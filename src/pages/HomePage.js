@@ -9,14 +9,14 @@ import { getStatistics } from '../services/getStatistics';
 export async function HomePage() {
     const page = document.createElement('section')
     page.className = 'home-page'
-    page.innerHTML = `<div class="home-page-wrap"></div>`
-    page.firstChild.innerHTML = `<p class="home-page-loading">Loading...</p>`
-
+    page.innerHTML = `<p class="home-page-loading">Loading...</p>`
+    
     const { data, error } = await getStatistics()
-
+    
     if (error) {
-        page.firstChild.innerHTML = `<p class="home-page-error">${error}</p>`
+        page.innerHTML = `<p class="home-page-error">Error: ${error}</p>`
     } else {
+        page.innerHTML = `<div class="home-page-wrap"></div>`
         page.firstChild.innerHTML = ``
         console.log(data)
 
