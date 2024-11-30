@@ -4,7 +4,10 @@ export const ButtonWithIcon = {
 
         button.type = 'button';
         button.className = className;
-        button.innerHTML = `${icon}<span>${text}</span>`;
+        button.innerHTML = `
+            ${icon ? icon : ''}
+            ${text ? `<span>${text}</span>` : ''}
+        `;
         if (onClick) button.onclick = onClick;
 
         return button;
