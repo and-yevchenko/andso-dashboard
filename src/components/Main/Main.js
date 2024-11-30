@@ -6,12 +6,17 @@ import { stateNav } from "../Nav/Nav";
 
 export const Main = {
     main: null,
-    pages: [
-        HomePage(),
-        TasksPage(),
-        MessagesPage(),
-        TeamPage()
-    ],
+    pages: [],
+
+    async init() {
+        this.pages = await Promise.all ([
+            HomePage(),
+            TasksPage(),
+            MessagesPage(),
+            TeamPage()
+        ])
+        this.create()
+    },
 
     create() {
         this.main = document.createElement('main');
@@ -22,7 +27,7 @@ export const Main = {
             this.main.appendChild(page);
         });
 
-        return this.main;
+        document.querySelector('#app').appendChild(this.main)
     },
 
     renderPage(index) {

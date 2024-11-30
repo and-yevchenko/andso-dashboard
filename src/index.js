@@ -5,6 +5,6 @@ import './style.css';
 
 const app = document.querySelector('#app');
 
-app.appendChild(Header());
-app.appendChild(Sidebar());
-app.appendChild(Main.create())
+app.append(Header());
+app.append(Sidebar());
+Main.init()
