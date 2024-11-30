@@ -1,23 +1,23 @@
 import { Chart } from 'chart.js';
 import { Box } from '../Box/Box';
 
-export function CircleChart() {
+export function CircleChart(data) {
     const canvas = document.createElement('canvas');
 
     const chart = new Chart(canvas, {
         type: 'doughnut',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green'],
+            labels: Object.keys(data.values),
             datasets: [
                 {
-                    label: 'Growth',
-                    data: [12, 19, 3, 5],
+                    label: data.label,
+                    data: Object.values(data.values),
                     hoverOffset: 5,
                 },
             ],
         },
     });
 
-    const circleChart = Box.create({ title: 'Sales', content: canvas });
+    const circleChart = Box.create({ title: data.title, content: canvas });
     return circleChart;
 }

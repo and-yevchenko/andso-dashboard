@@ -33,9 +33,9 @@ export async function HomePage() {
         page.firstChild.append(
             BarChart(data.find((el) => el.title === 'Sales by category')),
         );
-        page.firstChild.append(CircleChart());
+        page.firstChild.append(CircleChart(data.find((el) => el.title === 'Profit')));
         page.firstChild.append(PolarAreaChart());
-        page.firstChild.append(CircleChart());
+        page.firstChild.append(CircleChart(data.find((el) => el.title === 'Profit / Loss')));
     }
 
     return page;
