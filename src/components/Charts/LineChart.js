@@ -1,19 +1,21 @@
 import { Chart } from 'chart.js';
 import { Box } from '../Box/Box';
 
-export function LineChart() {
+export function LineChart(data) {
     const canvas = document.createElement('canvas');
+    const value = Object.values(data.values)
+    console.log(value[0] < value[value.length - 1] ? '#00d800' : '#ff2020')
 
     const chart = new Chart(canvas, {
         type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: Object.keys(data.values).slice(-6),
             datasets: [
                 {
-                    label: 'Growth',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderColor: '#9f4636bb',
-                    tension: 0.5,
+                    label: data.label,
+                    data: Object.values(data.values).slice(-6),
+                    borderColor: value[0] < value[value.length - 1] ? '#008f00be' : '#c20a0acc',
+                    tension: 0.2,
                 },
             ],
         },
@@ -26,6 +28,6 @@ export function LineChart() {
         },
     });
 
-    const lineChart = Box.create({ title: 'Sales', content: canvas });
+    const lineChart = Box.create({ title: data.title, content: canvas });
     return lineChart;
 }

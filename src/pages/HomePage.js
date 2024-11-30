@@ -12,18 +12,18 @@ export async function HomePage() {
     page.innerHTML = `<p class="home-page-loading">Loading...</p>`;
 
     const { data, error } = await getStatistics();
+    // console.log(data.find((el) => el.title === 'Sales'))
 
     if (error) {
         page.innerHTML = `<p class="home-page-error">Error: ${error}</p>`;
     } else {
         page.innerHTML = `<div class="home-page-wrap"></div>`;
         page.firstChild.innerHTML = ``;
-        console.log(data);
 
         Chart.register(...registerables);
-        page.firstChild.append(LineChart());
-        page.firstChild.append(LineChart());
-        page.firstChild.append(LineChart());
+        page.firstChild.append(LineChart(data.find((el) => el.title === 'Sales')));
+        page.firstChild.append(LineChart(data.find((el) => el.title === 'Offer')));
+        page.firstChild.append(LineChart(data.find((el) => el.title === 'Demand')));
         page.firstChild.append(BarChart());
         page.firstChild.append(CircleChart());
         page.firstChild.append(PolarAreaChart());

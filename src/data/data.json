@@ -2,6 +2,7 @@
     {
         "title": "Sales",
         "id": 1,
+        "label": "Sales for the last 6 months",
         "values": {
             "January": 80,
             "February": 55,
@@ -20,6 +21,7 @@
     {
         "title": "Offer",
         "id": 2,
+        "label": "Offers by quarter",
         "values": {
             "1": 200,
             "2": 90,
@@ -30,6 +32,7 @@
     {
         "title": "Demand",
         "id": 3,
+        "label": "Demand by quarter",
         "values": {
             "1": 75,
             "2": 20,
