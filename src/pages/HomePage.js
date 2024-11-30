@@ -28,14 +28,13 @@ export async function HomePage() {
             LineChart(data.find((el) => el.title === 'Offer')),
         );
         page.firstChild.append(
-            LineChart(data.find((el) => el.title === 'Demand')),
-        );
-        page.firstChild.append(
             BarChart(data.find((el) => el.title === 'Sales by category')),
         );
         page.firstChild.append(CircleChart(data.find((el) => el.title === 'Profit')));
         page.firstChild.append(PolarAreaChart(data.find((el) => el.title === 'Continents')));
-        page.firstChild.append(CircleChart(data.find((el) => el.title === 'Profit / Loss')));
+        page.firstChild.append(
+            LineChart(data.find((el) => el.title === 'Demand')),
+        );
     }
 
     return page;

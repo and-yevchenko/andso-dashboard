@@ -9,16 +9,16 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     > :nth-child(1) {
-        grid-column: span 1;
+        grid-column: span 2;
     }
     > :nth-child(2) {
         grid-column: span 1;
     }
     > :nth-child(3) {
-        grid-column: span 1;
+        grid-column: span 3;
     }
     > :nth-child(4) {
-        grid-column: span 3;
+        grid-column: span 1;
     }
     > :nth-child(5) {
         grid-column: span 1;

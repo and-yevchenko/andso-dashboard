@@ -24,9 +24,9 @@
         "label": "Offers by quarter",
         "values": {
             "1": 200,
-            "2": 90,
-            "3": 50,
-            "4": 120
+            "2": 40,
+            "3": 100,
+            "4": 70
         }
     },
     {
@@ -34,8 +34,8 @@
         "id": 3,
         "label": "Demand by quarter",
         "values": {
-            "1": 75,
-            "2": 20,
+            "1": 40,
+            "2": 70,
             "3": 20,
             "4": 95
         }
@@ -91,18 +91,10 @@
         "id": 6,
         "values": {
             "Europe": 90,
-            "Asia": 35,
-            "Africa": 15,
+            "Asia": 55,
+            "Africa": 35,
             "North America": 90,
-            "South America": 20
-        }
-    },
-    {
-        "title": "Profit / Loss",
-        "id": 7,
-        "values": {
-            "Profit": 65,
-            "Loss": 35
+            "South America": 40
         }
     }
 ]
