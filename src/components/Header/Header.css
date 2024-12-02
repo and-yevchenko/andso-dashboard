@@ -14,10 +14,22 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    transition: all 0.5s ease;
     > * {
         text-align: center;
         font-size: 1.5rem;
         color: var(--color-text-extra);
+    }
+    &:hover {
+        background-color: var(--color-hover-btn);
+        transition: all 0.5s ease;
+    }
+}
+
+.notifications._active {
+    color: var(--color-accent);
+    i {
+        color: var(--color-accent);
     }
 }
 

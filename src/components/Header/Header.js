@@ -17,10 +17,14 @@ export function Header() {
 
     const userSection = document.createElement('div');
     userSection.className = 'user-section';
+    const handleClick = (e) => {
+        e.currentTarget.classList.toggle('_active')
+    };
     userSection.append(
         ButtonWithIcon.create({
             className: 'notifications',
             icon: `<i class="fa-regular fa-bell">`,
+            onClick: handleClick,
         }),
     );
     userSection.append(
