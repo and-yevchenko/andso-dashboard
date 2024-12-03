@@ -12,29 +12,33 @@ export async function HomePage() {
     page.innerHTML = `<p class="home-page-loading">Loading...</p>`;
 
     const { data, error } = await getStatistics();
-    // console.log(data.find((el) => el.title === 'Sales'))
 
     if (error) {
         page.innerHTML = `<p class="home-page-error">Error: ${error}</p>`;
     } else {
-        page.innerHTML = `<div class="home-page-wrap"></div>`;
-        page.firstChild.innerHTML = ``;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'home-page-wrap';
 
         Chart.register(...registerables);
-        page.firstChild.append(
-            LineChart(data.find((el) => el.title === 'Sales')),
-        );
-        page.firstChild.append(
-            LineChart(data.find((el) => el.title === 'Offer')),
-        );
-        page.firstChild.append(
-            BarChart(data.find((el) => el.title === 'Sales by category')),
-        );
-        page.firstChild.append(CircleChart(data.find((el) => el.title === 'Profit')));
-        page.firstChild.append(PolarAreaChart(data.find((el) => el.title === 'Continents')));
-        page.firstChild.append(
-            LineChart(data.find((el) => el.title === 'Demand')),
-        );
+
+        const chartsConfig = [
+            { chart: LineChart, title: 'Sales' },
+            { chart: PolarAreaChart, title: 'Continents' },
+            { chart: BarChart, title: 'Sales by category' },
+            { chart: CircleChart, title: 'Profit' },
+            { chart: LineChart, title: 'Offer' },
+            { chart: LineChart, title: 'Demand' }
+        ];
+
+        chartsConfig.forEach(({ chart, title }) => {
+            const chartData = data.find(el => el.title === title);
+            if (chartData) {
+                wrapper.append(chart(chartData));
+            }
+        });
+
+        page.innerHTML = '';
+        page.append(wrapper);
     }
 
     return page;
