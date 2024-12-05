@@ -29,6 +29,11 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 2rem;
+    @media screen and (max-width: 1079px) {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
     > :nth-child(1) {
         grid-column-start: 1;
         grid-column-end: 3;

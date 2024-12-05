@@ -32,6 +32,7 @@ export function Sidebar() {
             alt: 'Emma Roberts',
             name: 'Emma Roberts',
             position: 'Sales manager',
+            className: 'profile__sidebar',
         }),
     );
     sidebar.append(new Navigation(navMenu).getElement());
