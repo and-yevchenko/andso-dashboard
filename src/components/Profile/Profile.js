@@ -1,9 +1,10 @@
 import './Profile.css';
 
 export const Profile = {
-    create({ src, alt, name, position }) {
+    create({ src, alt, name, position, className }) {
         const profile = document.createElement('button');
         profile.className = 'profile';
+        profile.classList.add(className);
 
         profile.innerHTML = `
             <img class="profile-img" src=${src} alt=${alt} />
