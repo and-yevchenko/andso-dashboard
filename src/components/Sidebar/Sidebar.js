@@ -28,7 +28,7 @@ export function Sidebar() {
 
     sidebar.append(
         Profile.create({
-            src: './src/assets/user/emma-roberts.jpg',
+            src: '/user/emma-roberts.jpg',
             alt: 'Emma Roberts',
             name: 'Emma Roberts',
             position: 'Sales manager',
