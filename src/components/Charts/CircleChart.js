@@ -10,11 +10,18 @@ export function CircleChart(data) {
             labels: Object.keys(data.values),
             datasets: [
                 {
-                    label: data.label,
+                    label: '',
                     data: Object.values(data.values),
                     hoverOffset: 5,
                 },
             ],
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
         },
     });
 

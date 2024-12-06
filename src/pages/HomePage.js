@@ -23,9 +23,9 @@ export async function HomePage() {
 
         const chartsConfig = [
             { chart: LineChart, title: 'Sales' },
-            { chart: PolarAreaChart, title: 'Continents' },
+            { chart: PolarAreaChart, title: 'Continents coverage' },
             { chart: BarChart, title: 'Sales by category' },
-            { chart: CircleChart, title: 'Profit' },
+            { chart: CircleChart, title: 'Profit by years' },
             { chart: LineChart, title: 'Offer' },
             { chart: LineChart, title: 'Demand' }
         ];
