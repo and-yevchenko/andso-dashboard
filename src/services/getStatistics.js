@@ -1,6 +1,6 @@
 export async function getStatistics() {
     try {
-        const response = await fetch('/data/data.json');
+        const response = await fetch('./src/data/data.json');
         if (!response.ok) {
             throw new Error('Error loading data');
         }
