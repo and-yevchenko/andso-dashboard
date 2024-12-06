@@ -29,7 +29,7 @@ export function Header() {
     );
     userSection.append(
         Profile.create({
-            src: '/src/assets/user/emma-roberts.jpg',
+            src: './src/assets/user/emma-roberts.jpg',
             alt: 'Emma Roberts',
         }),
     );
